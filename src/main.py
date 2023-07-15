@@ -5,7 +5,7 @@ from src.config import DB_USER, DB_PASS, DB_HOST, DB_PORT, DB_NAME
 from src.router import router
 
 
-app = FastAPI()
+app = FastAPI(title="Check the cost of insurance")
 
 app.include_router(router)
 
