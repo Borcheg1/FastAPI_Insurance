@@ -1,7 +1,7 @@
 import decimal
 from datetime import date
 
-from fastapi import status, Body
+from fastapi import status, Body, APIrouter
 
 from src.models import RateModel
 
