@@ -2,10 +2,12 @@ from fastapi import FastAPI
 from tortoise import Tortoise
 
 from src.config import DB_USER, DB_PASS, DB_HOST, DB_PORT, DB_NAME
+from src.router import router
 
 
 app = FastAPI()
 
+app.include_router(router)
 
 @app.on_event("startup")
 async def db_connection():
