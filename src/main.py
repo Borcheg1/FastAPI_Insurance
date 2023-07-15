@@ -1,3 +1,5 @@
+from time import sleep
+
 from fastapi import FastAPI
 from tortoise import Tortoise
 
@@ -14,6 +16,7 @@ async def db_connection():
     """
     Initial database connect
     """
+    sleep(25)  # This  hardcoded ugly when postgresql container will be finally uped
     try:
         await Tortoise.init(
             db_url=f'postgres://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}',
