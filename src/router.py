@@ -6,7 +6,7 @@ from fastapi import status, Body, APIRouter
 from src.models import RateModel
 
 
-router = APIrouter()
+router = APIRouter()
 
 
 @router.post("/rate", status_code=status.HTTP_201_CREATED)
