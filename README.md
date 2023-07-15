@@ -9,7 +9,7 @@
 ## Руководство по установке и запуску приложения
 
 1. Откройте терминал и введите команду
-`git clone https://github.com/Borcheg1/FastAPI_Insurance .git`
+`git clone https://github.com/Borcheg1/FastAPI_Insurance.git`
 
 2. Перейдите в рабочую дерикторию проекта:
 `cd FastAPI_Insurance/`
