@@ -12,7 +12,7 @@
 `git clone https://github.com/Borcheg1/FastAPI_Insurance.git`
 
 2. Перейдите в рабочую дерикторию проекта:
-`cd FastAPI_Insurance\`
+`cd FastAPI_Insurance/`
 
 3. Переименуйте файл `env_example` в `.env` в корневой папке проекта и введите свой пароль для переменной `DB_PASS=your_password`
 
