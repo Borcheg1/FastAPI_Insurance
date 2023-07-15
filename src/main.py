@@ -16,7 +16,7 @@ async def db_connection():
     """
     Initial database connect
     """
-    sleep(60)  # This  hardcoded ugly when postgresql container will be finally uped
+    sleep(5)  # This  hardcoded ugly when postgresql container will be finally uped
     try:
         await Tortoise.init(
             db_url=f'postgres://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}',
