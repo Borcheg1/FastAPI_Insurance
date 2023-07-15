@@ -3,11 +3,13 @@ from datetime import date
 
 from fastapi import status, Body
 
-from src.main import app
 from src.models import RateModel
 
 
-@app.post("/rate", status_code=status.HTTP_201_CREATED)
+router = APIrouter()
+
+
+@router.post("/rate", status_code=status.HTTP_201_CREATED)
 async def add_rates(rate_dict: dict = Body(...)):
     """
     ### add to database some data\n
@@ -46,7 +48,7 @@ async def add_rates(rate_dict: dict = Body(...)):
     return {f"message: rates added successfully"}
 
 
-@app.get("/check", status_code=status.HTTP_200_OK)
+@router.get("/check", status_code=status.HTTP_200_OK)
 async def check_rate(date_from: date, cargo_type: str, price: decimal.Decimal):
     """
     **date_from:** date in format 2023-06-24<br>
