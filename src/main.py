@@ -15,7 +15,7 @@ async def db_connection():
     try:
         await Tortoise.init(
             db_url=f'postgres://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}',
-            modules={'models': ['main']}
+            modules={'models': ['src.models']}
         )
         await Tortoise.generate_schemas()
         print("Database connection was successfull")
